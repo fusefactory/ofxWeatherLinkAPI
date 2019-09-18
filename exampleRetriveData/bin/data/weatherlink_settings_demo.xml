@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<weatherlink>
+<url xml="https://api.weatherlink.com/v1/NoaaExt.xml?"/>
+<authentication user="001D0A00DE6A" pass="DEMO" apiToken="demo0a002bc5272033001d0a002bc527"/>
+</weatherlink>
