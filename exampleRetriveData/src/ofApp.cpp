@@ -5,7 +5,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     
     ofAddListener(weatherLinkAPI.newData, this, &ofApp::newDataofxWeatherLinkAPI);
-    weatherLinkAPI.setup("weatherlink_settings_demo.xml");
+    weatherLinkAPI.setup("weatherlink_settings_rivoli.xml");
     weatherLinkAPI.requestAsyncDataFromAPI();   //async
     
 }
@@ -19,7 +19,7 @@ void ofApp::newDataofxWeatherLinkAPI(ofxWeatherLinkAPI & weatherLinkAPI){
 void ofApp::update(){
     time_t currTime = time(0);
     
-    //request new data every 60 secons
+    //request new data
     if(weatherLinkAPI.isLoadedData() && currTime - weatherLinkAPI.getData().timeLastUpdate > weatherLinkAPI.getSuggestedPickupPeriod()){
         weatherLinkAPI.requestAsyncDataFromAPI();   //async
     }
